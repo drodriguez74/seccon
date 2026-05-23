@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Design tokens ──────────────────────────────────────── */
+
+:root {
+  /* Light mode (default) */
+  --color-bg-primary:    #F0F4F8;
+  --color-bg-surface:    #FFFFFF;
+  --color-border-subtle: #D0DCE8;
+  --color-accent-blue:   #1A6FA0;
+  --color-accent-silver: #4A5E72;
+  --color-accent-gold:   #9A7208;
+  --color-text-primary:  #0A1628;
+  --color-text-secondary:#4B607A;
+
+  --font-oswald: 'Oswald', sans-serif;
+  --font-inter:  'Inter',  sans-serif;
+}
+
+.dark {
+  /* Dark mode */
+  --color-bg-primary:    #080C14;
+  --color-bg-surface:    #0F1624;
+  --color-border-subtle: #1E2D45;
+  --color-accent-blue:   #4A9ECC;
+  --color-accent-silver: #C0C8D0;
+  --color-accent-gold:   #B8960C;
+  --color-text-primary:  #FFFFFF;
+  --color-text-secondary:#8899AA;
+}
+
+/* ─── Base reset ─────────────────────────────────────────── */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-family: var(--font-inter), sans-serif;
+  scroll-behavior: smooth;
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-oswald), sans-serif;
+    letter-spacing: 0.02em;
+  }
+}
+
+@layer utilities {
+  .text-balance { text-wrap: balance; }
+}
+
+/* ─── Scrollbar ──────────────────────────────────────────── */
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track  { background: var(--color-bg-primary); }
+::-webkit-scrollbar-thumb  { background: var(--color-border-subtle); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--color-accent-blue); }
+
+/* ─── Hero always renders on dark/space background ───────── */
+.hero-section {
+  background-color: #080C14 !important;
+}
+.hero-gradient {
+  background: linear-gradient(to bottom, transparent 0%, #080C1400 50%, #080C14 100%);
+}
+/* Bridge from hero-dark to the page background */
+.hero-bridge {
+  height: 80px;
+  background: linear-gradient(to bottom, #080C14, var(--color-bg-primary));
+}

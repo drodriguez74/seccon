@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 60" fill="none" aria-label="SecCon Group">
+  <!-- Trident icon -->
+  <g transform="translate(6, 4)">
+    <!-- Center tine -->
+    <rect x="23" y="2" width="3.5" height="30" fill="#C0C8D0" rx="1"/>
+    <!-- Left tine -->
+    <rect x="13" y="8" width="3" height="20" fill="#C0C8D0" rx="1"/>
+    <!-- Right tine -->
+    <rect x="33" y="8" width="3" height="20" fill="#C0C8D0" rx="1"/>
+    <!-- Left tine top curve -->
+    <path d="M14.5 8 Q14.5 2 23 2" stroke="#C0C8D0" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <!-- Right tine top curve -->
+    <path d="M34.5 8 Q34.5 2 24.75 2" stroke="#C0C8D0" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <!-- Handle -->
+    <rect x="22.25" y="32" width="5" height="16" fill="#4A9ECC" rx="1"/>
+    <!-- Base -->
+    <rect x="17" y="46" width="15.5" height="3" fill="#4A9ECC" rx="1.5"/>
+  </g>
+  <!-- Wordmark -->
+  <text x="62" y="38" font-family="Oswald, sans-serif" font-size="28" font-weight="600" letter-spacing="1">
+    <tspan fill="#4A9ECC">Sec</tspan><tspan fill="#C0C8D0">Con</tspan>
+  </text>
+  <!-- Tagline -->
+  <text x="63" y="52" font-family="Inter, sans-serif" font-size="8.5" fill="#8899AA" letter-spacing="2.5" font-weight="400">THE SECURITY CONTRACTOR GROUP</text>
+</svg>

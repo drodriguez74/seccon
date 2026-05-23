@@ -1,0 +1,6 @@
+# Audio Transcript — Recording 2
+*WhatsApp Audio 2026-05-21 at 18.35.49 | Duration: ~1.5 min*
+
+---
+
+No, it's going to be pretty much a static thing. I'm not going to have nearly as much tabs or not tabs. On those sites that I sent you, if you were to scroll up, it's like it goes on and on forever. Well, mine's not going to have all that information. I'll send a kind of imaging that I kind of got in my head to where I want it to be. But yeah, it's going to be static. The only updates is going to need, I guess, if I forgot to do something and I want to add it. So I guess I need to work on, go ahead and generate an Instagram page for Facebook and Twitter account that way, the links can be added to the website. But yeah, I'll totally guide you on how I want it to be. It's not going to be any dated with a lot of information. It's probably just going to have like five or six tabs up top. It's going to be a career website. So it's going to be a website where, let's say, Department of Defense, because what they do before they issue a company, a contract, they're going to look at your website. And so I want it to be like a career oriented website where people can go searching for jobs, finding more out about the company, et cetera, et cetera.
