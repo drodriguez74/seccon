@@ -1,25 +1,27 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 60" fill="none" aria-label="SecCon Group">
-  <!-- Trident icon -->
-  <g transform="translate(6, 4)">
-    <!-- Center tine -->
-    <rect x="23" y="2" width="3.5" height="30" fill="#C0C8D0" rx="1"/>
-    <!-- Left tine -->
-    <rect x="13" y="8" width="3" height="20" fill="#C0C8D0" rx="1"/>
-    <!-- Right tine -->
-    <rect x="33" y="8" width="3" height="20" fill="#C0C8D0" rx="1"/>
-    <!-- Left tine top curve -->
-    <path d="M14.5 8 Q14.5 2 23 2" stroke="#C0C8D0" stroke-width="3" fill="none" stroke-linecap="round"/>
-    <!-- Right tine top curve -->
-    <path d="M34.5 8 Q34.5 2 24.75 2" stroke="#C0C8D0" stroke-width="3" fill="none" stroke-linecap="round"/>
-    <!-- Handle -->
-    <rect x="22.25" y="32" width="5" height="16" fill="#4A9ECC" rx="1"/>
-    <!-- Base -->
-    <rect x="17" y="46" width="15.5" height="3" fill="#4A9ECC" rx="1.5"/>
-  </g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 70" fill="none" aria-label="SecCon Group">
+  <!--
+    Pointed prong trident. Symmetric around x=30.
+      Center: shaft 27-33, tip at (30,4)
+      Left:   shaft 13-19, tip at (16,9)  — 14px left of center
+      Right:  shaft 41-47, tip at (44,9)  — 14px right of center
+  -->
+
+  <!-- Prong fills -->
+  <polygon points="30,4  33,14  33,42  27,42  27,14"  fill="#C0C8D0"/>
+  <polygon points="16,9  19,18  19,42  13,42  13,18"  fill="#C0C8D0"/>
+  <polygon points="44,9  47,18  47,42  41,42  41,18"  fill="#C0C8D0"/>
+
+  <!-- Smooth bezier bridges between shoulders -->
+  <path d="M19 18 C22 18 24 14 27 14" stroke="#C0C8D0" stroke-width="3" stroke-linecap="round" fill="none"/>
+  <path d="M41 18 C38 18 36 14 33 14" stroke="#C0C8D0" stroke-width="3" stroke-linecap="round" fill="none"/>
+
+  <!-- Blue handle + base -->
+  <rect x="28" y="42" width="4" height="13" fill="#4A9ECC" rx="1"/>
+  <rect x="16" y="54" width="28" height="5"  fill="#4A9ECC" rx="2"/>
+
   <!-- Wordmark -->
-  <text x="62" y="38" font-family="Oswald, sans-serif" font-size="28" font-weight="600" letter-spacing="1">
-    <tspan fill="#4A9ECC">Sec</tspan><tspan fill="#C0C8D0">Con</tspan>
+  <text x="58" y="42" font-family="Oswald, sans-serif" font-size="28" font-weight="600" letter-spacing="1">
+    <tspan fill="#4A9ECC">Sec</tspan><tspan fill="#C0C8D0">Con Group</tspan>
   </text>
-  <!-- Tagline -->
-  <text x="63" y="52" font-family="Inter, sans-serif" font-size="8.5" fill="#8899AA" letter-spacing="2.5" font-weight="400">THE SECURITY CONTRACTOR GROUP</text>
+  <text x="58" y="60" font-family="Inter, sans-serif" font-size="8.5" fill="#8899AA" letter-spacing="2" font-weight="400">THE SECURITY CONTRACTOR GROUP</text>
 </svg>
