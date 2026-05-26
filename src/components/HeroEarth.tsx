@@ -21,61 +21,92 @@ export default function HeroEarth() {
     renderer.setClearColor(0x000000, 0)
     mount.appendChild(renderer.domElement)
 
-    // Lights — sun from upper-right
-    scene.add(new THREE.AmbientLight(0x222233, 1))
-    const sunLight = new THREE.DirectionalLight(0xffffff, 1.4)
-    sunLight.position.set(5, 3, 5)
+    // Intense, cinematic lighting
+    scene.add(new THREE.AmbientLight(0x0a0a1a, 0.5)) // Darker ambient for deep space contrast
+    
+    // Sun positioned to strike the top-right horizon edge vividly
+    const sunLight = new THREE.DirectionalLight(0xffffff, 3.0) 
+    sunLight.position.set(4, 1.5, -2)
     scene.add(sunLight)
 
-    // Earth sphere
     const loader = new THREE.TextureLoader()
-    const earthGeo = new THREE.SphereGeometry(1, 64, 64)
-    const earthMat = new THREE.MeshPhongMaterial({
+
+    // Larger Earth Geometry
+    const earthRadius = 1.4
+    const earthGeo = new THREE.SphereGeometry(earthRadius, 64, 64)
+    const earthMat = new THREE.MeshStandardMaterial({
       map: loader.load('/textures/earth.jpg'),
-      specularMap: loader.load('/textures/earth_specular.jpg'),
-      specular: new THREE.Color(0x333344),
-      shininess: 12,
+      roughness: 0.6,
+      metalness: 0.1,
     })
+    
     const earth = new THREE.Mesh(earthGeo, earthMat)
-    earth.rotation.x = 0.15
+    
+    // Adjust positioning to hug the bottom-left corner like the reference photo
+    earth.position.set(-1.1, -1.2, 0)
+    // Dynamic cinematic angle rotation
+    earth.rotation.x = 0.4
+    earth.rotation.z = -0.2
     scene.add(earth)
 
-    // Atmosphere — inner
-    const atmGeo = new THREE.SphereGeometry(1.06, 64, 64)
-    const atmMat = new THREE.MeshPhongMaterial({
-      color: 0x4a9ecc,
-      side: THREE.BackSide,
-      transparent: true,
-      opacity: 0.18,
-    })
-    scene.add(new THREE.Mesh(atmGeo, atmMat))
-
-    // Atmosphere — outer glow
-    const glowGeo = new THREE.SphereGeometry(1.18, 64, 64)
-    const glowMat = new THREE.MeshBasicMaterial({
-      color: 0x1a4a7a,
-      side: THREE.BackSide,
-      transparent: true,
-      opacity: 0.07,
+    // Atmospheric Glow via Custom Shader (Matches the vibrant blue flare)
+    const atmosphereGeo = new THREE.SphereGeometry(earthRadius * 1.04, 64, 64)
+    const atmosphereMat = new THREE.ShaderMaterial({
+      vertexShader: `
+        varying vec3 vNormal;
+        varying vec3 vViewPosition;
+        void main() {
+          vNormal = normalize(normalMatrix * normal);
+          vec4 mvPosition = modelViewMatrix * vec4(position, 1.0);
+          vViewPosition = -mvPosition.xyz;
+          gl_Position = projectionMatrix * mvPosition;
+        }
+      `,
+      fragmentShader: `
+        varying vec3 vNormal;
+        varying vec3 vViewPosition;
+        void main() {
+          vec3 normal = normalize(vNormal);
+          vec3 viewDir = normalize(vViewPosition);
+          // Intensity calculations based on view angle
+          float intensity = pow(0.7 - dot(normal, viewDir), 2.5);
+          // Bright vivid blue color matching the client image
+          vec3 atmosphereColor = vec3(0.1, 0.45, 1.0) * intensity;
+          gl_FragColor = vec4(atmosphereColor, intensity * 0.8);
+        }
+      `,
       blending: THREE.AdditiveBlending,
+      side: THREE.BackSide,
+      transparent: true,
       depthWrite: false,
     })
-    scene.add(new THREE.Mesh(glowGeo, glowMat))
 
-    // Star field
+    const atmosphere = new THREE.Mesh(atmosphereGeo, atmosphereMat)
+    atmosphere.position.copy(earth.position) // Keep it locked onto the earth's position
+    scene.add(atmosphere)
+
+    // Dense, crisp starfield
     const starGeo = new THREE.BufferGeometry()
-    const starCount = 1500
+    const starCount = 1200
     const positions = new Float32Array(starCount * 3)
     for (let i = 0; i < starCount * 3; i++) {
-      positions[i] = (Math.random() - 0.5) * 100
+      positions[i] = (Math.random() - 0.5) * 40
     }
     starGeo.setAttribute('position', new THREE.BufferAttribute(positions, 3))
-    scene.add(new THREE.Points(starGeo, new THREE.PointsMaterial({ color: 0xffffff, size: 0.07, sizeAttenuation: true })))
+    const starMat = new THREE.PointsMaterial({ 
+      color: 0xffffff, 
+      size: 0.03, 
+      sizeAttenuation: true,
+      transparent: true,
+      opacity: 0.9 
+    })
+    scene.add(new THREE.Points(starGeo, starMat))
 
     let animId: number
     const animate = () => {
       animId = requestAnimationFrame(animate)
-      earth.rotation.y += 0.0008
+      // Slow, subtle rotation on its custom tilted axis
+      earth.rotation.y += 0.0004
       renderer.render(scene, camera)
     }
     animate()
