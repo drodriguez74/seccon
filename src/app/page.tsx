@@ -10,7 +10,7 @@ const serviceCards = [
     Icon: BookOpen,
     title: 'Training',
     description:
-      'Guard force security with K9 units, designated defense marksman, firearms qualification, and combat medical (TCCC) training programs.',
+      'Guard force security with K9 units, close quarters battle (CQB), protective security specialist, tactical driving, designated defense marksman, firearms qualification, and combat medical (TCCC) training programs.',
     href: '/what-we-do',
     image: '/images/training.png',
   },
@@ -18,7 +18,7 @@ const serviceCards = [
     Icon: Shield,
     title: 'Protective Security',
     description:
-      'Physical security specialist deployment, risk assessment, and personnel protection for government facilities and operations worldwide.',
+      'Physical security protecting personnel, assets, government facilities and operations worldwide.',
     href: '/what-we-do',
     image: '/images/protection.jpg',
   },
@@ -26,7 +26,7 @@ const serviceCards = [
     Icon: Users,
     title: 'Mentor & Advising',
     description:
-      'Law enforcement professional development, security sector reform, and mentorship programs for partner nation forces.',
+      'Law enforcement professional development through mentorship and advisor programs for partner nation forces. These programs give law enforcement officers the tools necessary to be more effective in the field.',
     href: '/what-we-do',
     image: '/images/mentoring.png',
   },
@@ -94,7 +94,7 @@ export default function HomePage() {
               Core Services
             </h2>
             <p className="text-text-secondary max-w-2xl mx-auto">
-              Specialized capabilities built on 10+ years of operational experience in security, training, and risk management.
+              Specialized capabilities built on 20+ years of operational experience in security, training, and risk management.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

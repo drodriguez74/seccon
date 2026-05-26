@@ -60,7 +60,7 @@ export default function WhatWeDoPage() {
     <>
       <PageHero
         title="What We Do"
-        subtitle="Specialized security services and training programs built by operators, designed for mission environments."
+        subtitle="Specialized security services, mentoring, and training programs built by operators, designed for mission environments."
         image="/images/what-we-do-hero.jpg"
         imagePosition="center"
       />

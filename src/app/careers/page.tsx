@@ -69,12 +69,14 @@ export default function CareersPage() {
               </h2>
               <ul className="space-y-3 text-text-secondary text-sm mb-8">
                 {[
-                  'Military or law enforcement background',
-                  'Active or eligible federal security clearance',
+                  'Military, Executive Protection or Law Enforcement background',
+                  'K9 certification',
+                  'EMT, AEMT, or Paramedic certification',
+                  'DDM certification',
+                  'Firearms Instructor certification',
+                  'Law Enforcement training certification',
+                  'Active or eligibility to acquire federal security clearance',
                   'International deployment experience',
-                  'K9 handling certifications (preferred)',
-                  'TCCC / combat medical certification',
-                  'Marksmanship instructor credentials',
                   'Ability to operate in austere environments',
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-2.5">

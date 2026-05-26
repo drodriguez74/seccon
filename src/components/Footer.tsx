@@ -130,7 +130,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-border-subtle mt-10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-text-secondary text-xs">
-          <p>© {new Date().getFullYear()} SecCon Group. All rights reserved.</p>
+          <p>© 2025 SecCon Group. All rights reserved.</p>
           <p className="text-center">
             Trust · Performance · Dedication · Accountability · Results
           </p>

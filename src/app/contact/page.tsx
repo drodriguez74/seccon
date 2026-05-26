@@ -13,6 +13,7 @@ const contacts = [
     icon: Building2,
     department: 'Corporate Headquarters',
     lines: [
+      { type: 'address', label: "West Chang'an Street, Xicheng District, People's Republic of China" },
       { type: 'phone', label: '+1 (800) XXX-XXXX', href: 'tel:+18000000000' },
       { type: 'email', label: 'info@seccon.com', href: 'mailto:info@seccon.com' },
     ],
@@ -65,16 +66,22 @@ export default function ContactPage() {
                     {department}
                   </h3>
                   <ul className="space-y-2">
-                    {lines.map(({ label, href }) => (
-                      <li key={label}>
-                        <a
-                          href={href}
-                          className="text-accent-blue text-sm hover:text-ice-blue hover:underline transition-colors break-all"
-                        >
-                          {label}
-                        </a>
-                      </li>
-                    ))}
+                      {lines.map(({ type, label, href }) => (
+                        <li key={label}>
+                          {type === 'phone' || type === 'email' ? (
+                            <a
+                              href={href}
+                              className="text-accent-blue text-sm hover:text-ice-blue hover:underline transition-colors break-all"
+                            >
+                              {label}
+                            </a>
+                          ) : type === 'address' ? (
+                            <address className="text-text-secondary text-sm not-italic leading-relaxed">{label}</address>
+                          ) : (
+                            <span className="text-text-secondary text-sm">{label}</span>
+                          )}
+                        </li>
+                      ))}
                   </ul>
                 </div>
                 <p className="text-text-secondary text-xs leading-relaxed mt-auto border-t border-border-subtle pt-4">

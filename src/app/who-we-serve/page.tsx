@@ -55,7 +55,7 @@ const trustPillars = [
   },
   {
     label: 'Strict Compliance',
-    body: 'Uncompromising adherence to ITAR, FAR, DFARS, and all applicable federal regulations. Compliance is not a checkbox — it is a core operational standard.',
+    body: 'Uncompromising adherence to ITAR, FAR, DFARS, NISPOM, Article 2 of the UCMJ, MEJA, and all applicable federal regulations. Compliance is not a checkbox — it is a core operational standard.',
   },
   {
     label: 'Global Footprint',
@@ -138,7 +138,7 @@ export default function WhoWeServePage() {
             <p className="text-text-secondary leading-relaxed max-w-3xl">
               We operate with absolute discretion, integrity, and precision. Every deployment
               aligns with U.S. foreign policy objectives and international legal standards. We
-              protect assets, secure infrastructure, and ensure mission success when failure is
+              protect personnel, assets, secure infrastructure, and ensure mission success when failure is
               not an option.
             </p>
           </div>

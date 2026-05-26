@@ -54,7 +54,7 @@ export default function AboutPage() {
                   infrastructure, we enable organizations to perform at the pace of demand.
                 </p>
                 <p>
-                  Our leadership team brings over a decade of direct operational experience across
+                  Our leadership team brings over two decades of direct operational experience across
                   private military contracts, force protection missions, and law enforcement
                   advisory programs spanning multiple continents and threat environments.
                 </p>
@@ -83,8 +83,8 @@ export default function AboutPage() {
               {/* Core values */}
               <div className="mt-8 grid grid-cols-1 gap-3">
                 {[
-                  { label: 'Readiness', desc: 'Combined security and law enforcement service from day one.' },
-                  { label: 'Strict Compliance', desc: 'Uncompromising adherence to ITAR, FAR, and federal regulations.' },
+                  { label: 'Readiness', desc: 'Combined military, security, and law enforcement service from day one.' },
+                  { label: 'Strict Compliance', desc: 'Uncompromising adherence to ITAR, FAR, NISPOM, Article 2 of the UCMJ, MEJA, and applicable federal regulations.' },
                   { label: 'Global Footprint', desc: 'Operational capability in remote and austere regions worldwide.' },
                   { label: 'Vetted Personnel', desc: 'Specialized teams holding active federal security clearances.' },
                 ].map(({ label, desc }) => (
