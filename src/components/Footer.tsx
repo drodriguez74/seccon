@@ -56,7 +56,13 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {/* Brand column */}
           <div className="flex flex-col gap-4">
-            <Image src="/logo.svg" alt="SecCon Group" width={160} height={40} />
+            <div className="flex items-center gap-3">
+              <Image src="/seccon-mark-detailed.svg" alt="SecCon Group" width={160} height={40} />
+              <span className="font-heading font-semibold text-lg">
+                <span className="text-accent-blue">Sec</span>
+                <span className="metallic-text ml-0.5">Con</span>
+              </span>
+            </div>
             <p className="text-text-secondary text-sm leading-relaxed">
               Trusted partner for critical mission support to U.S. Government and NGOs.
             </p>

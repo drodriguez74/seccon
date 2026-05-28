@@ -54,6 +54,13 @@ html, body {
 
 @layer utilities {
   .text-balance { text-wrap: balance; }
+  .metallic-text {
+    background: linear-gradient(180deg, #e6e7e8 0%, #cfcfd0 50%, #f3f4f5 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    filter: drop-shadow(0 1px 0 rgba(0,0,0,0.35));
+  }
 }
 
 /* ─── Scrollbar ──────────────────────────────────────────── */

@@ -70,7 +70,11 @@ export default function Navbar() {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
         {/* Logo */}
         <Link href="/" className="flex items-center shrink-0" onClick={() => setOpen(false)}>
-          <Image src="/logo.svg" alt="SecCon Group" width={180} height={45} priority />
+          <Image src="/seccon-mark-detailed.svg" alt="SecCon Group" width={55} height={45} priority />
+          <span className="ml-3 font-heading font-semibold text-lg">
+            <span className="text-accent-blue">Sec</span>
+            <span className="metallic-text ml-0.5">Con</span>
+          </span>
         </Link>
 
         {/* Desktop nav */}

@@ -35,6 +35,9 @@ export const metadata: Metadata = {
     title: 'SecCon Group | Trusted Partner. Critical Mission.',
     description: 'SDVOSB + MBE security contracting company delivering integrated solutions for critical missions worldwide.',
   },
+  icons: {
+    icon: '/seccon-mark-favicon.svg',
+  },
   robots: { index: true, follow: true },
 }
 
