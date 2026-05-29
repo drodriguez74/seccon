@@ -57,11 +57,17 @@ export default function Footer() {
           {/* Brand column */}
           <div className="flex flex-col gap-4">
             <div className="flex items-center gap-3">
-              <Image src="/seccon-mark-detailed.svg" alt="SecCon Group" width={160} height={40} />
-              <span className="font-heading font-semibold text-lg">
-                <span className="text-accent-blue">Sec</span>
-                <span className="metallic-text ml-0.5">Con</span>
-              </span>
+              <Image src="/logo-icon.png" alt="SecCon Group" width={160} height={40} />
+              <div className="flex w-[128px] flex-col items-start leading-none">
+                <span className="block w-full font-heading font-semibold text-[15px] whitespace-nowrap">
+                  <span className="metallic-text-blue">Sec</span>
+                  <span className="metallic-text">Con</span>
+                  <span className="metallic-text-blue"> Group</span>
+                </span>
+                <span className="block w-full font-heading mt-0.5 text-[7px] tracking-[0.1em] whitespace-nowrap">
+                  <span className="metallic-text">Security Contractor Group</span>
+                </span>
+              </div>
             </div>
             <p className="text-text-secondary text-sm leading-relaxed">
               Trusted partner for critical mission support to U.S. Government and NGOs.
@@ -115,11 +121,15 @@ export default function Footer() {
             </h3>
             <ul className="flex flex-col gap-2 text-text-secondary text-sm">
               <li>
-                <a href="mailto:info@seccon.com" className="hover:text-accent-blue transition-colors">
-                  info@seccon.com
+                <a href="mailto:info@seccongroup.com" className="hover:text-accent-blue transition-colors">
+                  info@seccongroup.com
                 </a>
               </li>
-              <li>+1 (800) XXX-XXXX</li>
+              <li>
+                <a href="tel:+18444732266" className="hover:text-accent-blue transition-colors">
+                  1-844-4-SECCON
+                </a>
+              </li>
             </ul>
 
             <h3 className="text-text-primary font-heading text-sm font-semibold uppercase tracking-widest mt-6 mb-3">

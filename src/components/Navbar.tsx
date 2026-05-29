@@ -17,7 +17,7 @@ const navLinks = [
 ]
 
 // All pages have a dark hero — navbar uses white text until scrolled past it
-const DARK_HERO_PAGES = ['/', '/about', '/what-we-do', '/who-we-serve', '/careers', '/contact']
+const DARK_HERO_PAGES = new Set(['/', '/about', '/what-we-do', '/who-we-serve', '/careers', '/contact'])
 
 export default function Navbar() {
   const pathname = usePathname()
@@ -41,23 +41,24 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [pathname])
 
-  const isHero = DARK_HERO_PAGES.includes(pathname) && !scrolled
+  const isHero = DARK_HERO_PAGES.has(pathname) && !scrolled
 
   // Link colour rules:
   //   Over dark hero  → active = bright white + white underline
   //                     inactive = white/70, hover white
   //   Scrolled/themed → active = accent blue + blue underline
   //                     inactive = text-secondary, hover text-primary
-  const linkClass = (active: boolean) =>
-    `px-3 py-2 text-sm font-heading font-medium tracking-wide uppercase transition-colors duration-150 rounded ${
-      isHero
-        ? active
-          ? 'text-white border-b-2 border-white/60'
-          : 'text-white/70 hover:text-white'
-        : active
-          ? 'text-[#4A9ECC] border-b-2 border-[#4A9ECC]'
-          : 'text-text-secondary hover:text-text-primary'
-    }`
+  const linkClass = (active: boolean) => {
+    let colorClass = 'text-text-secondary hover:text-text-primary'
+
+    if (isHero) {
+      colorClass = active ? 'text-white border-b-2 border-white/60' : 'text-white/70 hover:text-white'
+    } else if (active) {
+      colorClass = 'text-[#4A9ECC] border-b-2 border-[#4A9ECC]'
+    }
+
+    return `px-3 py-2 text-sm font-heading font-medium tracking-wide uppercase transition-colors duration-150 rounded ${colorClass}`
+  }
 
   return (
     <header
@@ -71,13 +72,13 @@ export default function Navbar() {
         {/* Logo */}
         <Link href="/" className="flex items-center shrink-0" onClick={() => setOpen(false)}>
           <Image src="/seccon-mark-detailed.svg" alt="SecCon Group" width={55} height={45} priority />
-          <div className="ml-3 flex flex-col leading-tight">
-            <span className="font-heading font-semibold text-lg">
+          <div className="ml-3 flex w-[128px] flex-col items-start leading-none">
+            <span className="block w-full font-heading font-semibold text-[15px] whitespace-nowrap">
               <span className="metallic-text-blue">Sec</span>
               <span className="metallic-text">Con</span>
               <span className="metallic-text-blue"> Group</span>
             </span>
-            <span className="font-heading text-[10px] tracking-widest proper-case">
+            <span className="block w-full font-heading mt-0.5 text-[7px] tracking-[0.1em] whitespace-nowrap">
               <span className="metallic-text">Security Contractor Group</span>
             </span>
           </div>

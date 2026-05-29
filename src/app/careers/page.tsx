@@ -5,7 +5,7 @@ import PageHero from '@/components/PageHero'
 export const metadata: Metadata = {
   title: 'Careers',
   description:
-    'Explore career opportunities with SecCon Group. All legitimate roles are posted through seccon.com/careers. We never charge fees or use personal email accounts for recruitment.',
+    'Explore career opportunities with SecCon Group. All legitimate roles are posted through seccongroup.com/careers. We never charge fees or use personal email accounts for recruitment.',
 }
 
 export default function CareersPage() {
@@ -87,7 +87,7 @@ export default function CareersPage() {
               </ul>
               <div className="flex items-center gap-2 text-text-secondary text-sm">
                 <Mail size={14} className="text-accent-blue shrink-0" />
-                <span>Inquiries: <a href="mailto:recruiting@seccon.com" className="text-accent-blue hover:underline">recruiting@seccon.com</a></span>
+                <span>Inquiries: <a href="mailto:recruiter@seccongroup.com" className="text-accent-blue hover:underline">recruiter@seccongroup.com</a></span>
               </div>
             </div>
           </div>
@@ -116,7 +116,7 @@ export default function CareersPage() {
                 },
                 {
                   icon: Mail,
-                  text: 'Recruiters will always contact you from a @seccon.com email address. We do not use Gmail, Yahoo, or any other personal email services.',
+                  text: 'Recruiters will always contact you from a @seccongroup.com email address. We do not use Gmail, Yahoo, or any other personal email services.',
                 },
                 {
                   icon: AlertTriangle,
@@ -124,7 +124,7 @@ export default function CareersPage() {
                 },
                 {
                   icon: ShieldX,
-                  text: 'All legitimate roles are posted through seccon.com/careers. Any other source should be treated as suspicious.',
+                  text: 'All legitimate roles are posted through seccongroup.com/careers. Any other source should be treated as suspicious.',
                 },
               ].map(({ icon: Icon, text }) => (
                 <div key={text} className="flex items-start gap-3">
