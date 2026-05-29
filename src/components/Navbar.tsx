@@ -71,10 +71,16 @@ export default function Navbar() {
         {/* Logo */}
         <Link href="/" className="flex items-center shrink-0" onClick={() => setOpen(false)}>
           <Image src="/seccon-mark-detailed.svg" alt="SecCon Group" width={55} height={45} priority />
-          <span className="ml-3 font-heading font-semibold text-lg">
-            <span className="text-accent-blue">Sec</span>
-            <span className="metallic-text ml-0.5">Con</span>
-          </span>
+          <div className="ml-3 flex flex-col leading-tight">
+            <span className="font-heading font-semibold text-lg">
+              <span className="metallic-text-blue">Sec</span>
+              <span className="metallic-text">Con</span>
+              <span className="metallic-text-blue"> Group</span>
+            </span>
+            <span className="font-heading text-[10px] tracking-widest proper-case">
+              <span className="metallic-text">Security Contractor Group</span>
+            </span>
+          </div>
         </Link>
 
         {/* Desktop nav */}

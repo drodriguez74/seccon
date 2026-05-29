@@ -61,6 +61,13 @@ html, body {
     color: transparent;
     filter: drop-shadow(0 1px 0 rgba(0,0,0,0.35));
   }
+  .metallic-text-blue {
+    background: linear-gradient(180deg, #7dc5e5 0%, #0F72D7 50%, #93d0ec 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    filter: drop-shadow(0 1px 0 rgba(0,0,0,0.35));
+  }
 }
 
 /* ─── Scrollbar ──────────────────────────────────────────── */

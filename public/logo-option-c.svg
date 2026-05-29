@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 70" fill="none" aria-label="SecCon Group — Option C: Bold thick tines with crossbar">
+  <!--
+    OPTION C — Bold / authoritative
+    Thicker tines (6px) connected by a solid horizontal crossbar instead of arches.
+    Heavier, more commanding presence. Symmetric around x=30.
+      Center: x=27 w=6 → center=30
+      Left:   x=13 w=6 → center=16, 14px left  ✓
+      Right:  x=41 w=6 → center=44, 14px right ✓
+    Crossbar: x=13 w=34 → center=30 ✓
+    Base:     x=14 w=32 → center=30 ✓
+  -->
+
+  <!-- Crossbar connects all three tines at the junction (painted first, tines on top) -->
+  <rect x="13" y="12" width="34" height="6" fill="#C0C8D0" rx="3"/>
+
+  <!-- Thick silver tines -->
+  <rect x="27" y="5"  width="6" height="37" fill="#C0C8D0" rx="3"/>
+  <rect x="13" y="13" width="6" height="29" fill="#C0C8D0" rx="3"/>
+  <rect x="41" y="13" width="6" height="29" fill="#C0C8D0" rx="3"/>
+
+  <!-- Blue handle + base -->
+  <rect x="27" y="42" width="6" height="13" fill="#4A9ECC" rx="2"/>
+  <rect x="14" y="54" width="32" height="6"  fill="#4A9ECC" rx="3"/>
+
+  <!-- Wordmark -->
+  <text x="58" y="42" font-family="Oswald, sans-serif" font-size="28" font-weight="600" letter-spacing="1">
+    <tspan fill="#4A9ECC">Sec</tspan><tspan fill="#C0C8D0">Con Group</tspan>
+  </text>
+  <text x="58" y="60" font-family="Inter, sans-serif" font-size="8.5" fill="#8899AA" letter-spacing="2" font-weight="400">THE SECURITY CONTRACTOR GROUP</text>
+</svg>
