@@ -4,6 +4,10 @@ import { Shield, BookOpen, Users } from 'lucide-react'
 import ValuesBanner from '@/components/ValuesBanner'
 import Badge from '@/components/Badge'
 import HeroEarthClient from '@/components/HeroEarthClient'
+import HeroVideo from '@/components/HeroVideo'
+
+// Flip this to `false` to restore the globe hero without touching the rest of the page.
+const USE_VIDEO_HERO = true
 
 const serviceCards = [
   {
@@ -37,9 +41,13 @@ export default function HomePage() {
     <>
       {/* Hero — always dark/space regardless of theme */}
       <section className="hero-section relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
-        {/* Three.js Earth — full background */}
+        {/* Background hero layer — switchable between globe and video. */}
         <div className="absolute inset-0 z-0">
-          <HeroEarthClient />
+          {USE_VIDEO_HERO ? (
+            <HeroVideo className="h-full w-full object-cover object-center" />
+          ) : (
+            <HeroEarthClient />
+          )}
         </div>
 
         {/* Gradient overlay — fades Earth into dark base */}
@@ -59,7 +67,7 @@ export default function HomePage() {
             Trusted Partner.<br />
             <span className="text-[#4A9ECC]">Critical Mission.</span>
           </h1>
-          <p className="text-[#8899AA] text-lg sm:text-xl max-w-2xl mx-auto leading-relaxed mb-8">
+          <p className="text-white/95 text-lg sm:text-xl font-medium max-w-2xl mx-auto leading-relaxed mb-8 drop-shadow-[0_2px_10px_rgba(0,0,0,0.85)]">
             Delivering integrated security solutions, training, and mission support to U.S. Government agencies and defense sectors worldwide.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
