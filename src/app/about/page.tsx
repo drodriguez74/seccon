@@ -14,7 +14,7 @@ export default function AboutPage() {
       <PageHero
         title="About Us"
         subtitle="A trusted partner built on service, precision, and an unwavering commitment to mission success."
-        image="/images/about-hero.jpg"
+        image="/images/about-hero.png"
         imagePosition="center"
       />
 

@@ -71,7 +71,7 @@ export default function Navbar() {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
         {/* Logo */}
         <Link href="/" className="flex items-center shrink-0" onClick={() => setOpen(false)}>
-          <Image src="/seccon-mark-detailed.svg" alt="SecCon Group" width={55} height={45} priority />
+          <Image src="/logo-icon.png" alt="SecCon Group" width={55} height={45} priority />
           <div className="ml-3 flex w-[128px] flex-col items-start leading-none">
             <span className="block w-full font-heading font-semibold text-[15px] whitespace-nowrap">
               <span className="metallic-text-blue">Sec</span>
