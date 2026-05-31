@@ -31,7 +31,7 @@ const contacts = [
     icon: Phone,
     department: 'HR & Recruitment',
     lines: [
-      { type: 'phone', label: '+1 (305) XXX-XXXX', href: 'tel:+13050000000' },
+      { type: 'phone', label: '1-844-4-SECCON', href: 'tel:+18444732266' },
       { type: 'email', label: 'humanresource@seccongroup.com', href: 'mailto:humanresource@seccongroup.com' },
       { type: 'email', label: 'recruiter@seccongroup.com', href: 'mailto:recruiter@seccongroup.com' },
     ],
