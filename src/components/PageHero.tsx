@@ -4,7 +4,7 @@ interface PageHeroProps {
   title: string
   subtitle?: string
   image?: string
-  imagePosition?: 'center' | 'top' | 'bottom' | 'left' | 'right'
+  imagePosition?: 'center' | 'top' | 'bottom' | 'left' | 'right' | 'top-left'
 }
 
 export default function PageHero({
@@ -19,6 +19,7 @@ export default function PageHero({
     bottom: 'object-bottom',
     left: 'object-left',
     right: 'object-right',
+    'top-left': 'object-left-top',
   }[imagePosition]
 
   return (

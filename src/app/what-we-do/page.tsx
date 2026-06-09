@@ -62,7 +62,7 @@ export default function WhatWeDoPage() {
         title="What We Do"
         subtitle="Specialized security services, mentoring, and training programs built by operators, designed for mission environments."
         image="/images/what-we-do-hero.png"
-        imagePosition="center"
+        imagePosition="top-left"
       />
 
       <section className="py-20 bg-bg-primary">
