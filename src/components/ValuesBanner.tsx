@@ -1,6 +1,8 @@
-const values = ['Trust', 'Performance', 'Dedication', 'Accountability', 'Results']
+interface ValuesBannerProps {
+  values: string[]
+}
 
-export default function ValuesBanner() {
+export default function ValuesBanner({ values }: ValuesBannerProps) {
   return (
     <div className="bg-bg-surface border-y border-border-subtle py-5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
