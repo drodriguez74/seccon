@@ -22,12 +22,26 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
   const dict = await getDict(locale)
   const t = dict.contact
 
-  const contacts = [
+  const contacts: {
+    icon: typeof Building2
+    department: string
+    lines: { type: string; label: string; href?: string; heading?: string }[]
+    note: string
+  }[] = [
     {
       icon: Building2,
       department: t.depts.hq.name,
       lines: [
-        { type: 'address', label: "West Chang'an Street, Xicheng District, People's Republic of China" },
+        {
+          type: 'address',
+          heading: t.addresses.hq,
+          label: 'Willow Oaks II\n8280 Willow Oaks Corporate Drive\nSuite 600, #17738264\nFairfax, VA 22031',
+        },
+        {
+          type: 'address',
+          heading: t.addresses.regional,
+          label: 'San Fernando Plaza\nTorre Protection\nCra 43a #1-50 Torre 1\n6th Floor, Office 652\nMedellín, Antioquia, Colombia 050021',
+        },
         { type: 'phone',   label: '1-844-4-SECCON', href: 'tel:+18444732266' },
         { type: 'email',   label: 'info@seccongroup.com', href: 'mailto:info@seccongroup.com' },
       ],
@@ -76,7 +90,7 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
                     {department}
                   </h3>
                   <ul className="space-y-2">
-                    {lines.map(({ type, label, href }) => {
+                    {lines.map(({ type, label, href, heading }) => {
                       let content: React.ReactNode
                       if (type === 'phone' || type === 'email') {
                         content = (
@@ -85,7 +99,14 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
                           </a>
                         )
                       } else if (type === 'address') {
-                        content = <address className="text-text-secondary text-sm not-italic leading-relaxed">{label}</address>
+                        content = (
+                          <div className="mb-2">
+                            {heading && (
+                              <p className="text-text-primary text-xs font-semibold uppercase tracking-widest mb-1">{heading}</p>
+                            )}
+                            <address className="text-text-secondary text-sm not-italic leading-relaxed whitespace-pre-line">{label}</address>
+                          </div>
+                        )
                       } else {
                         content = <span className="text-text-secondary text-sm">{label}</span>
                       }

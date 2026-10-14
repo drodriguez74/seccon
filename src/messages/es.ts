@@ -260,6 +260,7 @@ const es: Dict = {
       media: { name: 'Consultas de Medios', note: 'Prensa, solicitudes de medios, asuntos públicos y declaraciones oficiales.' },
       hr: { name: 'Recursos Humanos y Reclutamiento', note: 'Consultas de empleo, correspondencia con candidatos y subcontratación.' },
     },
+    addresses: { hq: 'Sede Principal', regional: 'Oficina Regional' },
     teaming: {
       heading: 'Oportunidades de Asociación y Subcontratación',
       body: 'SecCon Group da la bienvenida a consultas de asociación de contratistas principales que buscan un subcontratista certificado SDVOSB y MBE. Nuestro estatus de doble certificación ayuda a los contratistas principales a cumplir sus objetivos de subcontratación de diversidad, al mismo tiempo que aporta experiencia operativa genuina al equipo. Comuníquese con nuestra sede corporativa para discutir el alcance, la capacidad y la estructura del equipo.',

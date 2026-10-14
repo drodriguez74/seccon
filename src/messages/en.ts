@@ -257,6 +257,7 @@ const en = {
       media: { name: 'Media Inquiries', note: 'Press, media requests, public affairs, and official statements.' },
       hr: { name: 'HR & Recruitment', note: 'Employment inquiries, candidate correspondence, and subcontracting.' },
     },
+    addresses: { hq: 'Headquarters', regional: 'Regional Office' },
     teaming: {
       heading: 'Teaming & Subcontracting Opportunities',
       body: 'SecCon Group welcomes teaming inquiries from prime contractors seeking a certified SDVOSB and MBE subcontractor. Our dual certification status helps primes meet diversity subcontracting goals while bringing genuine operational expertise to the team. Contact our corporate headquarters to discuss scope, capacity, and teaming structure.',
